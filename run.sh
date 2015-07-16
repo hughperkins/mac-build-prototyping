@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir build
+if [[ ! -d build ]]; then {
+  mkdir build
+} fi
 
 machine=$(uname -a | cut -d \  -f 1)
 if [[ $machine == Linux ]]; then {
@@ -30,7 +32,7 @@ luafiles="lapi lcode ldebug ldump lgc lobject lopcodes lparser lstate lstring lt
 objfiles=""
 for file in ${luafiles}; do {
   echo $file
-  cc -c ${compile_options} -o build/$file.o lua/$file.c
+  c++ -c ${compile_options} -o build/$file.o lua/$file.c
   objfiles="${objfiles} build/$file.o"
 } done
 
