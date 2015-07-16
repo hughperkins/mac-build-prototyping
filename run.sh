@@ -22,7 +22,7 @@ linker_options=""
 #  linker_options="${linker_options} -shared"
 #} fi
 #if [[ -v is_apple ]]; then {
-  linker_options="${linker_options} -dynamiclib -flat_namespace"
+  linker_options="${linker_options} -dynamiclib -undefined dynamic_lookup"
 #} fi
 echo ${linker_options}
 
