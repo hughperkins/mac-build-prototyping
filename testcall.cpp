@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(int argc, char *argv[] ) {
-  void *hdl = dlopen("build/liblua", RTLD_NOW);
+  void *hdl = dlopen("libbar.dylib", RTLD_NOW);
   if(hdl == 0) {
     cout << dlerror() << endl;
     return -1;
