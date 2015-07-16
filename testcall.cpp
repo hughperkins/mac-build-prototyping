@@ -8,7 +8,7 @@ void testdlopen() {
   void *hdl = dlopen("libbar.dylib", RTLD_NOW);
   if(hdl == 0) {
     cout << dlerror() << endl;
-    return -1;
+    return;
   }
   cout << "hdl=" << (long)hdl << endl;
   void *f = dlsym(hdl, "lua_createtable");
