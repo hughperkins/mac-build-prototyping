@@ -10,20 +10,20 @@ if [[ $machine == Linux ]]; then {
 } fi
 
 compile_options=""
-if [[ -v is_linux ]]; then {
-  compile_options="${compile_options} -fPIC"
-} fi
-if [[ -v is_apple ]]; then {
+#if [[ -v is_linux ]]; then {
+#  compile_options="${compile_options} -fPIC"
+#} fi
+#if [[ -v is_apple ]]; then {
   compile_options="${compile_options} "
-} fi
+#} fi
 
 linker_options=""
-if [[ -v is_linux ]]; then {
-  linker_options="${linker_options} -shared"
-} fi
-if [[ -v is_apple ]]; then {
+#if [[ -v is_linux ]]; then {
+#  linker_options="${linker_options} -shared"
+#} fi
+#if [[ -v is_apple ]]; then {
   linker_options="${linker_options} -dynamic"
-} fi
+#} fi
 echo ${linker_options}
 
 luafiles="lapi lcode ldebug ldump lgc lobject lopcodes lparser lstate lstring ltable lundump lmem ldo lfunc llex ltm lzio lvm"
