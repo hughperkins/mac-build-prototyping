@@ -12,4 +12,7 @@ foreach(luafile ${luafiles})
 endforeach()
 message("lua_src ${lua_src}")
 
+add_library(bar ${lua_src})
+add_executable(testcall testcall.cpp)
+link_libraries(testcall bar)
 
