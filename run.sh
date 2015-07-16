@@ -22,7 +22,7 @@ linker_options=""
 #  linker_options="${linker_options} -shared"
 #} fi
 #if [[ -v is_apple ]]; then {
-  linker_options="${linker_options} -dynamic"
+  linker_options="${linker_options} -dynamiclib"
 #} fi
 echo ${linker_options}
 
