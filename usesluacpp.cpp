@@ -8,7 +8,7 @@ void doSomethingCpp(lua_State *L) {
 }
 
 void usesluacpp_testLua() {
-  L = luaL_newstate();
+  lua_state *L = luaL_newstate();
   luaL_openlibs(L);
   lua_close(L);
 }
